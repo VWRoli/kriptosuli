@@ -1,5 +1,7 @@
 # Kriptosuli
 
+The site is hosted [Here](https://kriptosuli-eu.netlify.app/)
+
 ## Description
 
 Hungarian cryptocurrency educational website for beginners.
@@ -14,4 +16,4 @@ Hungarian cryptocurrency educational website for beginners.
 - HTML
 - CSS
 - Javascript
-- CoinGecko API
+- [CoinGecko](https://www.coingecko.com/en) API
