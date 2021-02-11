@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-111610940-2"
+    ></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kriptopénz útmutatók és tájékoztatók kezdőknek magyar nyelven. Blokklánc technológia alapjai. Kriptopénz váltó és kriptopénz tárca ismertetők."
+    />
+    <meta
+      name="keywords"
+      content="Bitcoin, kripto valuta, Ethereum, blokklánc, litecoin, ripple, bitcoin cash, dash, kriptopénz, iota, cardano, stellar, bitcoin tárca, bitcoin tárolása"
+    />
+    <title>Lightning Network - Kriptosuli.eu</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link id="theme-style" rel="stylesheet" href="" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!--************* HEADER *************-->
+    <header>
+      <div class="container">
+        <a href="index.html"
+          ><img src="images/kriptosuli_logo_small.png" alt="Kriptosuli Logo"
+        /></a>
+      </div>
+    </header>
+
+    <!--************* NAV *************-->
+    <nav>
+      <div class="container">
+        <div class="nav-cont">
+          <div class="nav-burger">
+            <i class="fas fa-bars" id="burger-icon"></i>
+          </div>
+          <ul class="navbar">
+            <li class="menu-item"><a href="index.html">Főoldal</a></li>
+            <li class="menu-item"><a href="bitcoin.html">Bitcoin</a></li>
+            <li class="menu-item"><a href="ethereum.html">Ethereum</a></li>
+            <li class="menu-item"><a href="altcoins.html">Altcoinok</a></li>
+            <li class="menu-item dropdown">
+              <a href="#">Tárcák</a>
+              <ul class="sub-menu">
+                <li><a href="wallet.html">Ismertető</a></li>
+                <li><a href="ledger-nano.html">Ledger</a></li>
+                <li><a href="trezor.html">TREZOR</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="guides.html">Ismertetők</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--************* SLOGAN *************-->
+    <section id="slogan-cont">
+      <div class="container">
+        <div id="slogan">
+          <p class="slogan-text">
+            Szeretnéd megtudni, hogy mi az a Bitcoin, Ethereum, blokklánc
+            technológia? Itt minden kérdésedre választ kapsz a kriptopénz
+            világával kapcsolatban. Legyen szó a vásárlásról, tárolásról, vagy a
+            kriptovaluták technológiai hátteréről.
+          </p>
+
+          <div class="social">
+            <a href="https://www.facebook.com/kriptosuli.eu/" target="_blank"
+              ><img src="images/facebook.png" alt="Facebook link"
+            /></a>
+            <a href="https://twitter.com/kriptosuli" target="_blank"
+              ><img src="images/twitter.png" alt="Twitter link"
+            /></a>
+          </div>
+          <div class="theme-btns">
+            <input type="checkbox" name="theme-style" class="theme-btn" />
+            <i class="fas fa-moon"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--************* MAIN *************-->
+    <div class="flex-wrapper">
+      <div class="main">
+        <div class="container">
+          <!--************* MAIN ARTICLE SECTION *************-->
+          <section class="post-wrapper">
+            <h1>
+              Megoldás Bitcoin bővíthetőségi problémáira II. rész: Lightning
+              Network
+            </h1>
+            <img
+              src="images/bitcoin-lightning.jpg"
+              alt="Megoldás Bitcoin bővíthetőségi problémáira II. rész: Lightning Network"
+            />
+
+            <p>
+              A régóta várt Lighning Network lehetővé teszi az azonnali
+              tranzakciókat a
+              <a href="https://kriptosuli.eu/bitcoin.html">Bitcoin</a>
+              hálózaton. A Lightning Network a
+              <a href="https://kriptosuli.eu/blockchain.html">blokklánc</a>
+              beépített okos szerződés funkcióját használja amely lehetővé
+              teszi, hogy a blokkláncon kívül bonyolítsunk tranzakciókat. Az
+              alapötlet az, hogy nem kell az összes tranzakciót feljegyezni a
+              blokkláncon.
+            </p>
+
+            <h2>Hogyan működik a Lightning Network?</h2>
+            <p>
+              Képzeljük el, hogy két személy sok utalást végez egymás közt.
+              Ebben az esetben kikerülhetik a tranzakciók feljegyzését a fő
+              láncon és megoldhatják a blokkláncon kívül.
+            </p>
+            <p>
+              Egyszerűen fogalmazva egy fizetési csatornát nyit egymás között A
+              és B személy és ennek csak a megnyitását jegyzik fel a
+              blokkláncra.
+            </p>
+            <p>
+              Elöször A és B személy is egy kezdeti Bitcoin összeget helyez el
+              ezen a fizetési csatornán amely az alaptőkéje lesz ennek. Ez a
+              fizetési csatorna megosztásra kerül a Bitcoin hálózaton egy
+              tranzakcióként, és ezután az alaptőke biztosításra kerül a
+              blokkláncon.
+            </p>
+            <p>
+              Ha ez megtörténik A és B személy bármennyiszer utalhat egymás
+              között ezen a fizetési csatornán keresztül és nyitva maradhat akár
+              az idők végezetéig. A legközelebbi alkalom mikor a blokklánchoz
+              kellene nyúlniuk amikor bezárják a fizetési csatornát.
+            </p>
+            <p>
+              A fizetési csatornán történő utalások egy mikró főkönyvön van
+              vezetve A és B személy között. Ameddig a fizetési csatorna nyitva
+              van A és B személy közötti tranzakciók azonnaliak, mivel nem kell
+              arra várniuk, hogy az utalásaik bekerüljenek egy blokkba.
+            </p>
+            <p>
+              Amikor bezárják a fizetési csatornát a tranzakciók végleges
+              állapota feljegyzésre kerül a blokkláncon.
+            </p>
+
+            <h2>Hogyan működik a Lightning Network több személlyel?</h2>
+
+            <p>
+              Minden tranzakciónál új fizetési csatornát létrehozni ugyanolyan
+              veszteséges lenne, mint ha minden tranzakciót feljegyeznénk a
+              blokkláncon. Itt jön képbe a Lightning Network hálózata.
+            </p>
+            <p>
+              A fizetési csatornák összeköthetőek, tehát új tranzakciók
+              keresztül mehetnek már meglévő fizetési csatornán is. Ez azt
+              jelenti, hogy nem csak A és B személy tranzakciói mennek keresztül
+              az általuk létrehozott fizetési csatornákon, hanem C és D személyé
+              is, és még többen is.
+            </p>
+            <p>
+              Így használva a fizetési csatornákat, egy olyan hálózatot tudunk
+              létrehozni amely segítségével csak ritkán kellene tranzakciókat
+              feljegyezni a blokkláncra.
+            </p>
+            <p>
+              Tehát ha A és B személy között van egy nyitott fizetési csatorna,
+              és B és C személy között is van nyitva egy fizetési csatorna akkor
+              A személy tud Bitcoin-t küldeni C személynek B személyen át.
+            </p>
+            <p>
+              Ez úgy működik, hogy A személy szeretne küldeni 2 BTC-t C
+              személynek akkor B személy elküld 2 BTC-t C személynek és A
+              személy visszatéríti B személyt 2 BTC-vel.
+            </p>
+            <p>
+              Ez az alap ötlet a Lighning Network mögött. Mivel nem minden
+              tranzakciót fognak feljegyezni a blokkláncra, annak sebessége és
+              költségei csökkenni fognak, a Lightning Network pedig villám gyors
+              és rendkívül olcsó.
+            </p>
+            <p>
+              A Lightning Network használata nem lesz ingyenes, bizonyos
+              mennyiségű tranzakciós díjat fizetni kell a fizetési csatorna
+              tulajdonosainak, de ez nem lesz egy eget rengető összeg.
+            </p>
+            <p>
+              Végeredménye egy fizetési csatorna hálózat amely hatalmas
+              mennyiségű Bitcoin tranzakciót képes lebonyolítani anélkül, hogy
+              szükségtelenül megterhelné a blokkláncot. Ha a Lightning Network
+              elég nagyra nő akkor rengeteg Bitcoin tranzakció a Lightning
+              Network-n történne és csak a végeredmény tűnne fel a blokkláncon.
+            </p>
+            <p>
+              Fontos megemlíteni, hogy a Lightning Network csak kísérleti
+              jelleggel működik. Még csak az alfa teszteket végzik. Egyelőre még
+              korai megmondani mikor lesz a hálózat üzemképes a nagyközönség
+              előtt.
+            </p>
+
+            <p>
+              Lightning Network statisztikáit megtalálhatod
+              <a
+                href="http://lnstat.ideoflux.com:3000/dashboard/db/lightning-network?refresh=5m&orgId=1"
+                target="_blank"
+                >itt</a
+              >.
+            </p>
+
+            <h2>Lightning Network biztonsága</h2>
+
+            <p>
+              Lightning Network-nek megnő a biztonsági kockázata. Tranzakció
+              fogadásnál online kell, hogy legyen a fogadó fél. Azáltal, hogy a
+              fogadó fél tárcája mindig online van azt jelenti, hogy a privát
+              kulcsok veszélynek vannak kitéve ha egy biztonsági incidens
+              történik.
+            </p>
+
+            <h2>Centralizáció</h2>
+            <img
+              src="images/lightning-network.jpg"
+              alt="Lightning Network elosztás 2018 Január"
+            />
+            <p class="source">
+              Lightning Network elosztás 2018 Január Forrás:
+              https://lnmainnet.gaben.win/
+            </p>
+
+            <p>
+              Bármennyire is nagyszerű találmány a Lightning Network megvannak a
+              hátrányai. Egy teljesen decentralizált rendszer nem valószínű,
+              hogy fenntartható, sokkal valószínűbb, hogy nagy csomópontok
+              fognak kialakulni a rendszerben.
+            </p>
+            <p>
+              Legnagyobb oka ennek, hogy amikor egy tranzakció végbemegy több
+              csatornán keresztül, a közvetítő csatornáknak elég nagy tőkét kell
+              tárolniuk, hogy fedezni tudják a tranzakciót. Például egy 5 BTC-s
+              tranzakció nem mehet végig bármilyen csatornán, csak azokon ahol
+              legalább 5 BTC van.
+            </p>
+            <p>
+              Ennek logikus következménye, hogy nagy csomópontok fognak
+              kialakulni. Amikor a két fél kapcsolatban áll az egyik ilyen
+              csomóponttal ők használhatják a Lightning Network-t egymás között.
+              Ez elég lehet néhány decentralizáció fanatikusnak, hogy a
+              Lightning Network ellen legyen.
+            </p>
+            <p>
+              Ezek a nagy fizetési csomópontok azonban nem fognak hasonlítani a
+              bankokra. Soha nem lesz hozzáférésük a pénzedhez, a tranzakciókat
+              megbízható okos szerződések végzik.
+            </p>
+
+            <h2>Záró gondolatok</h2>
+            <p>
+              Lighning Network lehetővé teszi, hogy alacsony tranzakciós
+              díjakkal villám gyorsan lehessen Bitcoin-t utalni. Azonban minden
+              valószínűség szerint veszíteni fog a decentralizáltságából.
+              Kíváncsian várjuk, hogyan fog működni a jövőben, fenntartható
+              lesz-e a rendszer?
+            </p>
+            <div class="post-footer">
+              <p id="author">Szerző: kriptosuli.eu</p>
+
+              <div class="share">
+                <a
+                  id="fbshare"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://kriptosuli.eu/lightning.html"
+                  target="_blank"
+                  ><img
+                    src="images/fb-share.png"
+                    alt="Facebook"
+                    title="Facebook"
+                /></a>
+
+                <a
+                  id="tweet"
+                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fkriptosuli.eu%2Flightning.html&via=kriptosuli&text=Megoldas%20Bitcoin%20bovithetosegi%20problemaira%20II.%20resz%3A%20Lightning%20Network"
+                  target="_blank"
+                  ><img src="images/tweet.png" alt="Tweet" title="Twitter"
+                /></a>
+
+                <a
+                  id="google"
+                  href="https://plus.google.com/share?url=https://kriptosuli.eu/lightning.html"
+                  target="_blank"
+                  ><img src="images/google.png" alt="Google+" title="Google+"
+                /></a>
+
+                <a
+                  id="email"
+                  href="mailto:name1@mail.com,name2@mail.com?subject=Megold%C3%A1s%20Bitcoin%20b%C5%91v%C3%ADthet%C5%91s%C3%A9gi%20probl%C3%A9m%C3%A1ira%20II.%20r%C3%A9sz%3A%20Lightning%20Network"
+                  ><img src="images/email-icon.png" alt="Email" title="E-mail"
+                /></a>
+              </div>
+
+              <p id="date">2018. Január 27.</p>
+            </div>
+
+            <!--************* NEXT ARTICLES SECTION *************-->
+
+            <section class="next-section">
+              <h3>Merre tovább...</h3>
+              <div class="next-post-wrapper">
+                <div class="under-post">
+                  <a href="ethereum.html"
+                    ><img
+                      src="images/ethereum-small.jpg"
+                      alt="Ethereum útmutató kezdőknek"
+                    />
+                    <h4>Ethereum útmutató kezdőknek</h4></a
+                  >
+                </div>
+
+                <div class="under-post">
+                  <a href="ico.html"
+                    ><img src="images/ico-small.jpg" alt="Mi az az ICO?" />
+                    <h4>Mi az az ICO?</h4></a
+                  >
+                </div>
+
+                <div class="under-post">
+                  <a href="pow-pos.html"
+                    ><img
+                      src="images/pow-pos-small.jpg"
+                      alt="PoW és PoS mechanizmus"
+                    />
+                    <h4>PoW és PoS mechanizmus</h4></a
+                  >
+                </div>
+
+                <div class="under-post">
+                  <a href="litecoin.html"
+                    ><img
+                      src="images/litecoin-small.jpg"
+                      alt="Litecoin útmutató kezdőknek"
+                    />
+                    <h4>Litecoin útmutató kezdőknek</h4></a
+                  >
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+
+      <!--************* FOOTER *************-->
+
+      <footer>
+        <ul>
+          <li><a href="contact.html">Kapcsolat</a></li>
+          <li><a href="dictionary.html">Szótár</a></li>
+          <li><a href="tandc.html">Jogi nyilatkozat</a></li>
+          <li><a href="about.html">Rólunk</a></li>
+        </ul>
+        <p>
+          Kriptosuli.eu különböző marketing partnerprogramokban vesz részt,
+          amely azt jelenti, hogy Kriptosuli.eu jutalékot kaphat az oldalon
+          található egyes linkek használatáért.
+        </p>
+        <p>
+          Az oldalon megjelentetett információk kizárólag tájékoztató jellegűek,
+          nem minősülnek befektetési tanácsoknak. <br />Kriptopénzekbe való
+          befektetés, kereskedés jelentős kockázattal jár és veszteséggel is
+          zárulhat.<br />Csak és kizárólag saját felelősségedre vásárolj
+          kriptopénzeket. <br />Kriptosuli.eu ezért semmilyen felelőssséget nem
+          vállal.
+        </p>
+
+        &copy; 2018 Kriptosuli.eu Minden jog fenntartva.
+      </footer>
+    </div>
+  </body>
+</html>

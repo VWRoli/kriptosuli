@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-111610940-2"
+    ></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kriptopénz útmutatók és tájékoztatók kezdőknek magyar nyelven. Blokklánc technológia alapjai. Kriptopénz váltó és kriptopénz tárca ismertetők."
+    />
+    <meta
+      name="keywords"
+      content="Bitcoin, kripto valuta, Ethereum, blokklánc, litecoin, ripple, bitcoin cash, dash, kriptopénz, iota, cardano, stellar, bitcoin tárca, bitcoin tárolása"
+    />
+    <title>Tudj meg mindent a kriptopénzek világáról - Kriptosuli.eu</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link id="theme-style" rel="stylesheet" href="" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <script defer src="js/market.js"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!--************* HEADER *************-->
+    <header>
+      <div class="container">
+        <a href="index.html"
+          ><img src="images/kriptosuli_logo_small.png" alt="Kriptosuli Logo"
+        /></a>
+      </div>
+    </header>
+
+    <!--************* NAV *************-->
+    <nav>
+      <div class="container">
+        <div class="nav-cont">
+          <div class="nav-burger">
+            <i class="fas fa-bars" id="burger-icon"></i>
+          </div>
+          <ul class="navbar">
+            <li class="menu-item selected"><a href="index.html">Főoldal</a></li>
+            <li class="menu-item"><a href="bitcoin.html">Bitcoin</a></li>
+            <li class="menu-item"><a href="ethereum.html">Ethereum</a></li>
+            <li class="menu-item"><a href="altcoins.html">Altcoinok</a></li>
+            <li class="menu-item dropdown">
+              <a href="#">Tárcák</a>
+              <ul class="sub-menu">
+                <li><a href="wallet.html">Ismertető</a></li>
+                <li><a href="ledger-nano.html">Ledger</a></li>
+                <li><a href="trezor.html">TREZOR</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="guides.html">Ismertetők</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--************* SLOGAN *************-->
+    <section id="slogan-cont">
+      <div class="container">
+        <div id="slogan">
+          <p class="slogan-text">
+            Szeretnéd megtudni, hogy mi az a Bitcoin, Ethereum, blokklánc
+            technológia? Itt minden kérdésedre választ kapsz a kriptopénz
+            világával kapcsolatban. Legyen szó a vásárlásról, tárolásról, vagy a
+            kriptovaluták technológiai hátteréről.
+          </p>
+
+          <div class="social">
+            <a href="https://www.facebook.com/kriptosuli.eu/" target="_blank"
+              ><img src="images/facebook.png" alt="Facebook link"
+            /></a>
+            <a href="https://twitter.com/kriptosuli" target="_blank"
+              ><img src="images/twitter.png" alt="Twitter link"
+            /></a>
+          </div>
+          <div class="theme-btns">
+            <input type="checkbox" name="theme-style" class="theme-btn" />
+            <i class="fas fa-moon"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--************* MAIN *************-->
+    <div class="flex-wrapper">
+      <main class="main">
+        <!--************* MARKET PRICE SECTION *************-->
+        <section class="market-prices">
+          <div class="container">
+            <div class="market-price-wrapper">
+              <h2>Top 10 Kriptovaluta árfolyam</h2>
+              <div class="table-wrapper">
+                <table class="market-table visibility">
+                  <thead class="thead">
+                    <tr class="tr-grid">
+                      <th data-column="market_cap_rank" data-order="desc">
+                        Rang
+                        <i class="fas fa-sort"></i>
+                      </th>
+                      <th data-column="icon" data-order="desc">
+                        Ikon <i class="fas fa-sort"></i>
+                      </th>
+                      <th
+                        class="symbol-header"
+                        data-column="symbol"
+                        data-order="desc"
+                      >
+                        Jel <i class="fas fa-sort"></i>
+                      </th>
+                      <th
+                        class="name-header"
+                        data-column="name"
+                        data-order="desc"
+                      >
+                        Név <i class="fas fa-sort"></i>
+                      </th>
+                      <th
+                        class="price-header"
+                        data-column="current_price"
+                        data-order="desc"
+                      >
+                        Árfolyam <i class="fas fa-sort"></i>
+                      </th>
+                      <th
+                        class="price-change-header"
+                        data-column="price_change_percentage_24h"
+                        data-order="desc"
+                      >
+                        24ó <i class="fas fa-sort"></i>
+                      </th>
+                      <th
+                        class="marketcap-header"
+                        data-column="market_cap"
+                        data-order="desc"
+                      >
+                        Piaci Kínálat
+                        <i class="fas fa-sort"></i>
+                      </th>
+                      <th
+                        class="supply-header"
+                        data-column="circulating_supply"
+                        data-order="desc"
+                      >
+                        Forgó kínálat
+                        <i class="fas fa-sort"></i>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body"></tbody>
+                </table>
+                <span class="hide-market-btn"
+                  ><i class="fas fa-chevron-down"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--************* MAIN ARTICLE SECTION *************-->
+        <section>
+          <div class="container">
+            <div class="main-article-container">
+              <div class="main-article">
+                <a href="bitcoin.html"
+                  ><img
+                    src="images/bitcoin.jpg"
+                    alt="Mi az a Bitcoin? Útmutató kezdőknek"
+                  />
+                  <h1>Mi az a Bitcoin? - Útmutató kezdőknek</h1></a
+                >
+              </div>
+              <div class="side-articles">
+                <div class="secondary-article">
+                  <a href="ethereum.html"
+                    ><img
+                      src="images/ethereum-small.jpg"
+                      alt="Ethereum útmutató kezdőknek"
+                    />
+                    <h2>Mi az az Ethereum? - Útmutató kezdőknek</h2></a
+                  >
+                </div>
+
+                <div class="third-article">
+                  <a href="investing.html"
+                    ><img
+                      src="images/investing-small.jpg"
+                      alt="Kriptopénz befektetési stratégiák"
+                    />
+                    <h2>Kriptopénz befektetési stratégiák</h2></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--************* RECENT ARTICLE SECTION *************-->
+
+        <section>
+          <div class="container">
+            <div class="recent-articles">
+              <div class="medium-article">
+                <a class="med-img" href="steem.html"
+                  ><img
+                    src="images/steem-small.jpg"
+                    alt="Mi az a STEEM? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="steem.html"
+                    ><h3>Mi az a STEEM? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Március 09.</p>
+                  <p>
+                    STEEM a Steemit platform alapvető kriptovalutája amely egy
+                    blokkláncra épített közösségi média platform ami ösztönzési
+                    rendszert használ. Steemit felhasználók létrehozhatnak és
+                    szerkeszthetik a tartalmat csakúgy mint bármely más
+                    közösségi média platformon és ezért jutalmat kapnak a
+                    munkájukért.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article">
+                <a class="med-img" href="digixdao.html"
+                  ><img
+                    src="images/digixdao-small.jpg"
+                    alt="Mi az a DigixDAO? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="digixdao.html"
+                    ><h3>Mi az a DigixDAO? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Március 06.</p>
+                  <p>
+                    DigixDAO egy olyan kriptovalutát szeretne létrehozni amely
+                    mögött igazi arany rudak állnak. DigixDAO a Digix
+                    Decentralized Autonomous Organization, egy decentralizált
+                    csoport amelyben minden DGD token tulajdonos részt vesz a
+                    Digix Global Ecosystem fejlesztői döntéseiben. A DGD
+                    tokeneket Ethereum hálózat első sikeres ICO-ban lehetett
+                    megvásárolni.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article">
+                <a class="med-img" href="icon.html"
+                  ><img
+                    src="images/icon-small.jpg"
+                    alt="Mi az az ICON? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="icon.html"
+                    ><h3>Mi az az ICON? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Március 02.</p>
+                  <p>
+                    ICON össze szeretné kötni a világot, megépítve a legnagyobb
+                    decentralizált hálózatot. Az ICON csapat egy masszív
+                    platformot épít amely lehetővé teszi különböző
+                    blokkláncoknak, hogy kommunikáljanak egymással okos
+                    szerződések segítségével.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article">
+                <a class="med-img" href="transaction.html"
+                  ><img
+                    src="images/bitcoin-transaction-small.jpg"
+                    alt="Bitcoin tranzakciós díjak"
+                /></a>
+                <div class="post-info">
+                  <a href="transaction.html"
+                    ><h3>Bitcoin tranzakciós díjak</h3></a
+                  >
+                  <p class="timedate">2018. Február 27.</p>
+                  <p>
+                    A magas tranzakciós díjak nagy válságot okoztak a Bitcoin
+                    hálózatnak. Nem is olyan régen Bitcoin tranzakciós díjak
+                    olyan magasak voltak, hogy egy csoport egy teljesen új
+                    Bitcoin-t hozott létre csak azért, hogy alacsonyan tartsák a
+                    díjakat. Azonban ez nemrég visszafordult és régóta nem
+                    látott alacsony díjakkal dolgozik újra Bitcoin.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article">
+                <a class="med-img" href="omisego.html"
+                  ><img
+                    src="images/omisego-small.jpg"
+                    alt="Mi az a Bitcoin Gold? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="omisego.html"
+                    ><h3>Mi az az OmiseGO? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Február 23.</p>
+                  <p>
+                    OmiseGO projekt meglehetősen érdekesen van felépítve.
+                    OmiseGO Ethereum alapú technológiát használ. A csapat célja,
+                    hogy valós idejű peer to peer érték váltóként és fizetési
+                    szolgáltatásként működjön, mindezt globálisan szeretnék
+                    megvalósítani. Továbbá a projekt nemcsak hagyományos
+                    valutákkal, de kriptovalutákkal is foglalkozik.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="btg.html"
+                  ><img
+                    src="images/btg-small.jpg"
+                    alt="Mi az a Bitcoin Gold? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="btg.html"
+                    ><h3>Mi az a Bitcoin Gold? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Február 20.</p>
+                  <p>
+                    Bitcoin Gold (BTG) egy olyan kísérlet, amely szeretné
+                    Bitcoin-t újra decentralizálttá tenni azáltal, hogy a
+                    bányászatot könnyebbé teszik a mindennapi emberek számára.
+                    Kezdetben Bitcoin bányászat nagyon könnyű volt, ezért bárki
+                    bányászhatott a világon akár otthonról is. Azonban ez
+                    hamarosan megváltozott...
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="vechain.html"
+                  ><img
+                    src="images/vechain-small.jpg"
+                    alt="Mi az a VeChain? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="vechain.html"
+                    ><h3>Mi az a VeChain? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Február 16.</p>
+                  <p>
+                    VeChain(hamarosan VeChain Thor), egy blokklánc mint
+                    szolgáltatás rendszer. Vechain alapítvány fejleszti amely
+                    egy Szingapúrban honos non profit szervezet 2017-ben kezdte
+                    pályafutását. Eredetileg ellátásilánc-menedzsment volt a
+                    fókuszpontjuk blokklánchoz kötött Rádiófrekvenciás azonosító
+                    chip segítségével.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="qtum.html"
+                  ><img
+                    src="images/qtum-small.jpg"
+                    alt="Mi az a QTUM? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="qtum.html"
+                    ><h3>Mi az a QTUM? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Február 13.</p>
+                  <p>
+                    QTUM (kiejtése Kvantum) egy nyílt forráskódú érték átviteli
+                    platform amelynek fókuszpontja a mobil decentralizált
+                    applikációk (Dapp). QTUM ötvözni szeretné Bitcoin és
+                    Ethereum funkcióit.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="lisk.html"
+                  ><img
+                    src="images/lisk-small.jpg"
+                    alt="Mi az a Lisk? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="lisk.html"
+                    ><h3>Mi az a Lisk? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Február 07.</p>
+                  <p>
+                    Lisk (LSK) egy decentralizált applikációs platform csakúgy
+                    mint Ethereum, Cardano, NEO. Lisk egyedi megközelítése a
+                    fejlesztői elérhetőség. Céljuk, hogy a lehető legegyszerűbb
+                    legyen egy Dapp létrehozása, amelyet egy teljes Javascript
+                    környezettel teszik lehetővé.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="zcash.html"
+                  ><img
+                    src="images/zcash-small.jpg"
+                    alt="Mi az a Zcash? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="zcash.html"
+                    ><h3>Mi az a Zcash? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Február 05.</p>
+                  <p>
+                    Bitcoin átlátható módon operál azáltal, hogy nyilvános
+                    főkönyvön megosztja és ellenőrzi a tranzakciókat. Zcash
+                    (ZEC) azonban más módon állítja össze és ellenőrzi a
+                    tranzakciókat ezáltal növelve az anonimitását a
+                    felhasználónak.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="doge.html"
+                  ><img
+                    src="images/doge-small.jpg"
+                    alt="Mi az a Dogecoin? Avagy a világ legdrágább vicce"
+                /></a>
+                <div class="post-info">
+                  <a href="doge.html"
+                    ><h3>
+                      Mi az a Dogecoin? Avagy a világ legdrágább vicce
+                    </h3></a
+                  >
+                  <p class="timedate">2018. Február 02.</p>
+                  <p>
+                    Dogecoin, a paródia kriptopénz amelynek az internet meme
+                    Shiba Inu kutya a jelképe. Létrehozása után a kriptovaluta
+                    gyorsan nagy népszerűségre tett szert a kripto közösségben.
+                    Ez a viccként létrehozott kriptopénz az év elején elérte a 2
+                    milliárd dolláros piaci tőkét, amely meglehetősen sok pénz
+                    egy viccért.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="etc.html"
+                  ><img
+                    src="images/etc-small.jpg"
+                    alt="Mi az az Ethereum Classic és a DAO támadás?"
+                /></a>
+                <div class="post-info">
+                  <a href="etc.html"
+                    ><h3>Mi az az Ethereum Classic és a DAO támadás?</h3></a
+                  >
+                  <p class="timedate">2018. Január 30.</p>
+                  <p>
+                    Ethererum Classic (ETC) egy nyílt forráskódú decentralizált
+                    applikációk és okos szerződések futtatására alkalmas
+                    platform, amely blokklánc technológiára és az eredeti
+                    Ethereum-ra épül. Csakúgy mint Ethereum-nak van egy tokenje
+                    az Ether Classic amelyet a felhasználók fizetésre
+                    használhatnak a platformon.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="raiblocks.html"
+                  ><img
+                    src="images/nano-small.jpg"
+                    alt="Mi az a Nano? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="raiblocks.html"
+                    ><h3>Mi az a Nano? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Január 29.</p>
+                  <p>
+                    Nano blokk rács technológiájával Bitcoin babérjaira
+                    pályázik. A kriptovaluta ígérete szerint zéró tranzakciós
+                    díjakkal dolgozik mindezt instant tranzakciókkal. Emellett
+                    még elektromos áram felhasználása is elenyésző, majdnem a
+                    túl szép, hogy igaz legyen kategória.
+                  </p>
+                </div>
+              </div>
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="lightning.html"
+                  ><img
+                    src="images/bitcoin-lightning-small.jpg"
+                    alt="Megoldás Bitcoin bővíthetőségi problémáira II. rész: Lightning Network"
+                /></a>
+                <div class="post-info">
+                  <a href="lightning.html"
+                    ><h3>
+                      Megoldás Bitcoin bővíthetőségi problémáira II. rész:
+                      Lightning Network
+                    </h3></a
+                  >
+                  <p class="timedate">2018. Január 27.</p>
+                  <p>
+                    A régóta várt Lighning Network lehetővé teszi az azonnali
+                    tranzakciókat a Bitcoin hálózaton. A Lightning Network a
+                    blokklánc beépített okos szerződés funkcióját használja
+                    amely lehetővé teszi, hogy a blokkláncon kívül bonyolítsunk
+                    tranzakciókat. Az alapötlet az, hogy nem kell az összes
+                    tranzakciót feljegyezni a blokkláncon.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="segwit.html"
+                  ><img
+                    src="images/segwit-small.jpg"
+                    alt="Megoldás Bitcoin bővíthetőségi problémáira I. rész: SegWit"
+                /></a>
+                <div class="post-info">
+                  <a href="segwit.html"
+                    ><h3>
+                      Megoldás Bitcoin bővíthetőségi problémáira I. rész: SegWit
+                    </h3></a
+                  >
+                  <p class="timedate">2018. Január 26.</p>
+                  <p>
+                    SegWit, az a folyamat amelyben megnövelik a blokk méretét
+                    azáltal, hogy eltávolítják az aláírási adatokat a Bitcoin
+                    tranzakciókból. Amikor egy tranzakció bizonyos adatait
+                    eltávolítják, ez helyet szabadít fel, amely lehetővé teszi,
+                    hogy több tranzakció férjen a blokkba.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="eos.html"
+                  ><img
+                    src="images/eos-small.jpg"
+                    alt="Mi az az EOS? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="eos.html"
+                    ><h3>Mi az az EOS? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Január 25.</p>
+                  <p>
+                    EOS a decentralizált applikációk legerősebb
+                    infrastruktúrájává szeretne válni. Amióta Ethereum ilyen
+                    nagy figyelmet kapott, a Dapp ökoszisztéma hatalmas
+                    népszerűségre tett szert. Rengeteg applikáció építhető
+                    blokklánc technológiára, egyelőre még messze vagyunk
+                    tényleges potenciáljától.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="ico.html"
+                  ><img
+                    src="images/ico-small.jpg"
+                    alt="Mi az az 'Initial Coin Offering' (ICO)?"
+                /></a>
+                <div class="post-info">
+                  <a href="ico.html"
+                    ><h3>Mi az az 'Initial Coin Offering' (ICO)?</h3></a
+                  >
+                  <p class="timedate">2018. Január 24.</p>
+                  <p>
+                    Azoknak akik újak a kriptovaluták világában, nehéz lehet
+                    megérteni a különbséget az érmék és tokenek között. Az érme
+                    és token kifejezést sokan összekeverik, és sokan sokféleképp
+                    értelmezik őket. Ebben a cikkben megtudhatod a kettő közötti
+                    különbséget.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="token.html"
+                  ><img
+                    src="images/kripto-token-small.jpg"
+                    alt="Mi a különbség a kriptovaluta érmék (Coin) és tokenek (Token) között?"
+                /></a>
+                <div class="post-info">
+                  <a href="token.html"
+                    ><h3>
+                      Mi a különbség a kriptovaluta érmék (Coin) és tokenek
+                      (Token) között?
+                    </h3></a
+                  >
+                  <p class="timedate">2018. Január 23.</p>
+                  <p>
+                    'Initial Coin Offering' vagy más néven ICO egyfajta
+                    adománygyűjtés amelyben új projektek eladják a kripto
+                    tokenjeiket Bitcoin-ért vagy Ether-ért. Hasonlít egy
+                    'Initial Public Offering' (IPO)-hoz amelyben a befektetők
+                    részvényeket vesznek a vállalatból.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="nem.html"
+                  ><img
+                    src="images/nem-small.jpg"
+                    alt="Mi az a NEM (XEM)? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="nem.html"
+                    ><h3>Mi az a NEM (XEM)? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Január 22.</p>
+                  <p>
+                    NEM az öregebb kriptovaluták közé tartozik, pályafutását
+                    2014-ben kezdte meg. NEM „New Economy Movement” az alapoktól
+                    építette fel a platformját különös figyelmet fordítva a
+                    bővíthetőségre és sebességre. A kódot Java nyelven írták az
+                    alapoktól, tehát nem egy másik projekt leágazásaként jött
+                    létre.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="pow-pos.html"
+                  ><img
+                    src="images/pow-pos-small.jpg"
+                    alt="Mi a különbség Proof of Work (PoW) és Proof os Stake (PoS) között?"
+                /></a>
+                <div class="post-info">
+                  <a href="pow-pos.html"
+                    ><h3>
+                      Mi a különbség Proof of Work (PoW) és Proof os Stake (PoS)
+                      között?
+                    </h3></a
+                  >
+                  <p class="timedate">2018. Január 20.</p>
+                  <p>
+                    Proof of Work (PoW) és Proof os Stake (PoS) megegyezési
+                    algorutmusnak is ugyanaz a célja mégpedig, hogy
+                    megegyezzenek a blokklánc állapotáról. Minden csomópont
+                    (node) egyet kell, hogy értsen a blokklánc állapotáról.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="cardano.html"
+                  ><img
+                    src="images/cardano-small.jpg"
+                    alt="Mi az a Cardano (ADA)?"
+                /></a>
+                <div class="post-info">
+                  <a href="cardano.html"><h3>Mi az a Cardano (ADA)?</h3></a>
+                  <p class="timedate">2018. Január 19.</p>
+                  <p>
+                    Több mint két év tervezés és fejlesztés után Cardano 2017.
+                    szeptember 29-én indult útjára. Ethereum-hoz hasonlóan
+                    Cardano is egy Okos szerződés platform, amelynek legfőbb
+                    fókuszpontja a biztonság és bővíthetőség egy réteges
+                    felépítésen keresztül.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="stellar.html"
+                  ><img
+                    src="images/stellar-small.jpg"
+                    alt="Mi az a Stellar Lumens?"
+                /></a>
+                <div class="post-info">
+                  <a href="stellar.html"><h3>Mi az a Stellar Lumens?</h3></a>
+                  <p class="timedate">2018. Január 18.</p>
+                  <p>
+                    Stellar egy nyílt forráskódú, megosztott fizetési
+                    infrastruktúra. Stellar technológiája összeköti az
+                    embereket, fizetési rendszereket és bankokat. Célja, hogy
+                    megkönnyítse a devizaváltást és pénzügyi tranzakciókat,
+                    gyorsan megbízhatóan és centek töredékéért. Mindezt a Lumen
+                    (XLM) kriptopénz segítségével.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="neo.html"
+                  ><img src="images/neo-small.jpg" alt="Mi az a NEO?"
+                /></a>
+                <div class="post-info">
+                  <a href="neo.html"><h3>Mi az a NEO?</h3></a>
+                  <p class="timedate">2018. Január 17.</p>
+                  <p>
+                    NEO-t legtöbben „Kína Ethereum”-ának becézik. NEO, csak úgy
+                    mint Ethereum egy olyan platform amelyre Okos szerződéseket
+                    és Dapp-okat lehet építeni, azonban más célja és irányzata
+                    van. NEO Intelligens Gazdasági Ökoszisztémának (Smart
+                    Economy Ecosystem) nevezi magát.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="iota.html"
+                  ><img src="images/iota-small.jpg" alt="Mi az az IOTA?"
+                /></a>
+                <div class="post-info">
+                  <a href="iota.html"><h3>Mi az az IOTA?</h3></a>
+                  <p class="timedate">2018. Január 16.</p>
+                  <p>
+                    IOTA egy forradalmian új, következő generációs nyilvános
+                    elosztott főkönyv amely az egyedi „Tangle” technológiát
+                    használja. Ennek a radikálisan új struktúrának köszönhetően
+                    IOTA-ban a dolgok jelentősen másképp működnek, mint más
+                    blokklánc technológiát alkalmazó kriptopénzekben.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="monero.html"
+                  ><img
+                    src="images/monero-small.jpg"
+                    alt="Monero – Titoktartásra koncentrálva"
+                /></a>
+                <div class="post-info">
+                  <a href="monero.html"
+                    ><h3>Monero – Titoktartásra koncentrálva</h3></a
+                  >
+                  <p class="timedate">2018. Január 15.</p>
+                  <p>
+                    Monero a világ első, titkos, biztonságos és lenyomozhatatlan
+                    digitális valutája. Alapból minden Monero tranzakció
+                    lenyomozhatatlan, tehát lehetetlen kideríteni ki küldött
+                    pénzt kinek. Valójában, ha nem te vagy a tranzakció küldő
+                    vagy fogadó fele, az összeget sem lehet megállapítani.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="dash.html"
+                  ><img
+                    src="images/dash-small.jpg"
+                    alt="Dash – Avagy a digitális készpénz"
+                /></a>
+                <div class="post-info">
+                  <a href="dash.html"
+                    ><h3>Dash – Avagy a digitális készpénz</h3></a
+                  >
+                  <p class="timedate">2018. Január 14.</p>
+                  <p>
+                    Dash a Bitcoin-ban rejlő problémák sokaságát oldotta meg a
+                    tranzakciók felgyorsításával, fokozott pénzügyi
+                    titoktartással valamint egy decentralizált irányítási és
+                    finanszírozási rendszer kialakításával. A könnyű használat,
+                    expozíció és technológiai fejlesztésekre összpontosítva
+                    Dash-ben megvan a potenciál, hogy hosszú távú résztvevő
+                    legyen a kriptopénzek világában.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="trezor.html"
+                  ><img
+                    src="images/trezor-small.jpg"
+                    alt="TREZOR hardver tárca bemutató"
+                /></a>
+                <div class="post-info">
+                  <a href="trezor.html"
+                    ><h3>TREZOR hardver tárca bemutató</h3></a
+                  >
+                  <p class="timedate">2018. Január 12.</p>
+                  <p>
+                    A kriptovaluták, és blokklánc technológia népszerűségének
+                    növekedésével, befektetők manapság egyre több kriptopénzt
+                    tárolnak. A kérdés, hogy hogyan védhetőek meg hackerek és
+                    tolvajok ellen? Itt jön képbe a TREZOR, a világ első hardver
+                    Bitcoin tárcája.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="binance-bitfinex.html"
+                  ><img
+                    src="images/bitfinex-binance-small.jpg"
+                    alt="Binance és Bitfinex vásárlási útmutató"
+                /></a>
+                <div class="post-info">
+                  <a href="binance-bitfinex.html"
+                    ><h3>Binance és Bitfinex vásárlási útmutató</h3></a
+                  >
+                  <p class="timedate">2018. Január 11.</p>
+                  <p>
+                    Ebben az útmutatóban bemutatunk két piacvezető kriptopénz
+                    kereskedelmi platformot. Megmutatjuk hogyan is vásárolhatsz
+                    kriptopénzeket amelyek nem találhatók meg Coinbase-n vagy
+                    BitPanda-n. Első ránézésre talán bonyolultnak tűnik, de
+                    hamar belejön az ember. Elég egy ilyen weboldal alap
+                    logikáját megtanulni, és az összeset fogjuk tudni használni.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="ledger-nano.html"
+                  ><img
+                    src="images/ledger-nano-s-small.jpg"
+                    alt="Ledger Nano S bemutató"
+                /></a>
+                <div class="post-info">
+                  <a href="ledger-nano.html"><h3>Ledger Nano S bemutató</h3></a>
+                  <p class="timedate">2018. Január 11.</p>
+                  <p>
+                    A Ledger Nano S nem véletlenül a piacvezető darab. Minden
+                    kriptopénz rajongónak kötelező darab, hogy békésen tudjon
+                    aludni éjszaka. Rengeteg fajta kriptopénzt tárolhatunk egy
+                    könnyen használható felhasználói felületen.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="bch.html"
+                  ><img
+                    src="images/bch-small.jpg"
+                    alt="Bitcoin Cash - Avagy miért kell nekünk két Bitcoin?"
+                /></a>
+                <div class="post-info">
+                  <a href="bch.html"
+                    ><h3>
+                      Bitcoin Cash - Avagy miért kell nekünk két Bitcoin?
+                    </h3></a
+                  >
+                  <p class="timedate">2018. Január 11.</p>
+                  <p>
+                    Minden kétséget kizáróan Bitcoin (BTC) az egyik legnagyobb
+                    találmánya a közelmúltnak. Azonban, sok kritika éri
+                    bővíthetőségi problémái miatt amely sok vitát gerjeszt a
+                    közösségben. 2017 Augusztus 1.-én Bitcoin leágazásaként(Hard
+                    Fork) megszületett a Bitcoin Cash (BCH).
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="ripple.html"
+                  ><img
+                    src="images/ripple-small.jpg"
+                    alt="Mi az a Ripple? Útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="ripple.html"
+                    ><h3>Mi az a Ripple? Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Január 07.</p>
+                  <p>
+                    Ripple egy kicsit komplexebb, mint egy átlagos kriptopénzt.
+                    Amikor valaki a Ripple-t emlegeti több dolgot is érthet ez
+                    alatt. Lehet a digitális valuta (XRP), a nyílt fizetési
+                    rendszer amelyen a valuta használható, csakúgy mint a cég
+                    amely létrehozta ezt.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="litecoin.html"
+                  ><img
+                    src="images/litecoin-small.jpg"
+                    alt="Litecoin útmutató kezdőknek"
+                /></a>
+                <div class="post-info">
+                  <a href="litecoin.html"
+                    ><h3>Mi az a Litecoin? - Útmutató kezdőknek</h3></a
+                  >
+                  <p class="timedate">2018. Január 05.</p>
+                  <p>
+                    Legtöbben Litecoin-t (LTC) Bitcoin kistestvéreként
+                    emlegetik. Mondhatnánk ha Bitcoin célja, hogy egyfajta
+                    digitális arany legyen, akkor Litecoin célja, hogy az ehhez
+                    járó digitális ezüst legyen. 2017-ben amíg Bitcoin
+                    tiszteletre méltó 1332%-os növekedést produkált addig
+                    Litecoin 4866%-ot.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="cryptocurrency.html"
+                  ><img
+                    src="images/cryptos-small.jpg"
+                    alt="Bevezetés a Kriptopénzekbe"
+                /></a>
+                <div class="post-info">
+                  <a href="cryptocurrency.html"
+                    ><h3>Bevezetés a Kriptopénzekbe</h3></a
+                  >
+                  <p class="timedate">2018. Január 05.</p>
+                  <p>
+                    A kriptopénzek egy izgalmas új technológia amely alapjaiban
+                    fogja megváltoztatni pénzhez való hozzáállásunkat, legyen az
+                    pénzküldés, költekezés vagy akár befektetés. Bár egyelőre az
+                    emberek nagy része csak Bitcoin-t ismeri, sokkal többről van
+                    itt szó. Ez az ismertető egy jó kiindulási pont lesz, hogy
+                    megtudd miről is van szó.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="blockchain.html"
+                  ><img
+                    src="images/blockchain-small.jpg"
+                    alt="Bevezetés a blokklánc technológia rejtelmeibe"
+                /></a>
+                <div class="post-info">
+                  <a href="blockchain.html"
+                    ><h3>Bevezetés a blokklánc technológia rejtelmeibe</h3></a
+                  >
+                  <p class="timedate">2018. Január 05.</p>
+                  <p>
+                    Mi rejlik a motorháztető alatt? Hogy teljesen megértsük a
+                    kriptopénzek világát, szükséges megértenünk az alattuk lévő
+                    blokklánc technológiát amely nélkül, ma nem léteznének a
+                    kriptopénzek.
+                  </p>
+                </div>
+              </div>
+
+              <div class="medium-article hidden-articles">
+                <a class="med-img" href="wallet.html"
+                  ><img
+                    src="images/wallet-small.jpg"
+                    alt="Kriptopénz tárcák útmutató"
+                /></a>
+                <div class="post-info">
+                  <a href="wallet.html"><h3>Kriptopénz tárcák útmutató</h3></a>
+                  <p class="timedate">2018. Január 05.</p>
+                  <p>
+                    A hatalmas áringadozások közepette előfordul, hogy egy
+                    hack-től hangos a közösség ahol feltörtek egy kriptopénz
+                    váltót, és leléptek a felhasználók pénzével. A kriptopénz
+                    tulajok legnagyobb rémálma, hogy hacker támadás áldozata
+                    lesz. Nem csak hackerektől, de sokszor saját magunktól is
+                    meg kell védeni kriptopénzünket.
+                  </p>
+                </div>
+              </div>
+              <!---->
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!--************* FOOTER *************-->
+
+      <footer>
+        <ul>
+          <li><a href="contact.html">Kapcsolat</a></li>
+          <li><a href="dictionary.html">Szótár</a></li>
+          <li><a href="tandc.html">Jogi nyilatkozat</a></li>
+          <li><a href="about.html">Rólunk</a></li>
+        </ul>
+        <p>
+          Kriptosuli.eu különböző marketing partnerprogramokban vesz részt,
+          amely azt jelenti, hogy Kriptosuli.eu jutalékot kaphat az oldalon
+          található egyes linkek használatáért.
+        </p>
+        <p>
+          Az oldalon megjelentetett információk kizárólag tájékoztató jellegűek,
+          nem minősülnek befektetési tanácsoknak. <br />Kriptopénzekbe való
+          befektetés, kereskedés jelentős kockázattal jár és veszteséggel is
+          zárulhat.<br />Csak és kizárólag saját felelősségedre vásárolj
+          kriptopénzeket. <br />Kriptosuli.eu ezért semmilyen felelőssséget nem
+          vállal.
+        </p>
+
+        &copy; 2018 Kriptosuli.eu Minden jog fenntartva.
+      </footer>
+    </div>
+  </body>
+</html>

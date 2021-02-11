@@ -1,0 +1,14 @@
+:root {
+  --primaryColor: #2c2c32;
+  --darkColor: #a6a6a6;
+  --tertiary: #e8e8e8;
+  --linkColor: #00abed;
+  --hoverColor: #ff4500;
+  --lightBorder: #696969;
+  --footerBg: #696969;
+  --footerText: #e8e8e8;
+  --lightText: #e8e8e8;
+  --darkText: #fff;
+  --tableHeader: #696969;
+  --tableRow: #39393f;
+}

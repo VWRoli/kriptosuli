@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-111610940-2"
+    ></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kriptopénz útmutatók és tájékoztatók kezdőknek magyar nyelven. Blokklánc technológia alapjai. Kriptopénz váltó és kriptopénz tárca ismertetők."
+    />
+    <meta
+      name="keywords"
+      content="Bitcoin, kripto valuta, Ethereum, blokklánc, litecoin, ripple, bitcoin cash, dash, kriptopénz, iota, cardano, stellar, bitcoin tárca, bitcoin tárolása"
+    />
+    <title>SegWit - Kriptosuli.eu</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link id="theme-style" rel="stylesheet" href="" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!--************* HEADER *************-->
+    <header>
+      <div class="container">
+        <a href="index.html"
+          ><img src="images/kriptosuli_logo_small.png" alt="Kriptosuli Logo"
+        /></a>
+      </div>
+    </header>
+
+    <!--************* NAV *************-->
+    <nav>
+      <div class="container">
+        <div class="nav-cont">
+          <div class="nav-burger">
+            <i class="fas fa-bars" id="burger-icon"></i>
+          </div>
+          <ul class="navbar">
+            <li class="menu-item"><a href="index.html">Főoldal</a></li>
+            <li class="menu-item"><a href="bitcoin.html">Bitcoin</a></li>
+            <li class="menu-item"><a href="ethereum.html">Ethereum</a></li>
+            <li class="menu-item"><a href="altcoins.html">Altcoinok</a></li>
+            <li class="menu-item dropdown">
+              <a href="#">Tárcák</a>
+              <ul class="sub-menu">
+                <li><a href="wallet.html">Ismertető</a></li>
+                <li><a href="ledger-nano.html">Ledger</a></li>
+                <li><a href="trezor.html">TREZOR</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="guides.html">Ismertetők</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--************* SLOGAN *************-->
+    <section id="slogan-cont">
+      <div class="container">
+        <div id="slogan">
+          <p class="slogan-text">
+            Szeretnéd megtudni, hogy mi az a Bitcoin, Ethereum, blokklánc
+            technológia? Itt minden kérdésedre választ kapsz a kriptopénz
+            világával kapcsolatban. Legyen szó a vásárlásról, tárolásról, vagy a
+            kriptovaluták technológiai hátteréről.
+          </p>
+
+          <div class="social">
+            <a href="https://www.facebook.com/kriptosuli.eu/" target="_blank"
+              ><img src="images/facebook.png" alt="Facebook link"
+            /></a>
+            <a href="https://twitter.com/kriptosuli" target="_blank"
+              ><img src="images/twitter.png" alt="Twitter link"
+            /></a>
+          </div>
+          <div class="theme-btns">
+            <input type="checkbox" name="theme-style" class="theme-btn" />
+            <i class="fas fa-moon"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--************* MAIN *************-->
+    <div class="flex-wrapper">
+      <div class="main">
+        <div class="container">
+          <!--************* MAIN ARTICLE SECTION *************-->
+          <section class="post-wrapper">
+            <h1>Megoldás Bitcoin bővíthetőségi problémáira I. rész: SegWit</h1>
+            <img
+              src="images/bitcoin-segwit.jpg"
+              alt="Megoldás Bitcoin bővíthetőségi problémáira I. rész: SegWit"
+            />
+
+            <p>
+              SegWit, az a folyamat amelyben megnövelik a blokk méretét azáltal,
+              hogy eltávolítják az aláírási adatokat a Bitcoin tranzakciókból.
+              Amikor egy tranzakció bizonyos adatait eltávolítják, ez helyet
+              szabadít fel, amely lehetővé teszi, hogy több tranzakció férjen a
+              blokkba.
+            </p>
+            <p>
+              Tavaly Augusztusban Bitcoin fejlesztők bevezették SegWit-et a
+              Bitcoin blokkláncon, ezáltal sokkal gyorsabbá és bővíthetőbbé téve
+              a platformot.
+            </p>
+
+            <h2>A probléma</h2>
+
+            <p>
+              A probléma amivel Bitcoin már régóta küszködik, ahogy egyre több
+              és több ember használja úgy egyre több blokkot kell hozzáadni a
+              blokklánchoz. A blokkokat 10 perces időközönként generálják és
+              maximum 1 MB méretűek lehetnek. Ennek a határnak köszönhetően csak
+              egy bizonyos számú tranzakció fér bele a blokkba. A tranzakciók
+              súlya nagyon megterheli a blokkláncot, ennek következményeként
+              rengeteg a késés lép fel a tranzakciók feldolgozásában és
+              ellenőrzésében. Egyes esetekben akár órákig is tarthat egy Bitcoin
+              tranzakció megerősítése.
+            </p>
+
+            <h2>Mi az a SegWit?</h2>
+            <p>
+              Az egyik fejlesztés amelynek célja, hogy megoldja a blokk
+              méretezési problémáját a SegWit protokoll. 2016-ban javasolta
+              először a Bitcoin fejlesztői csapat. A SegWit protokoll
+              kettéválasztja az eredeti blokkot, az eredeti blokkra és egy
+              kiterjesztett úgynevezett 'witness' blokkra.
+            </p>
+            <p>
+              A SegWit protokoll kiveszi a tranzakció aláírásokat az eredeti
+              blokkból és a 'witness' blokkba helyezi őket, ezáltal több helyet
+              hagyva az eredeti blokkban. A blokk mérete ugyanakkora marad,
+              azonban hatékonyabban több tranzakciót tud tárolni.
+            </p>
+            <p>
+              Az eredeti blokk továbbra is tárolni fogja a küldő és fogadó fél
+              információit, míg az új 'witness' blokk tárolja az aláírásokat.
+              Tehát lesz egy blokk csak a fejléccel ami a fogadó fél adatait
+              tartalmazza és lesz egy kiterjesztett blokk ami az aláírásokat és
+              nyilvános kulcsokat tárolja.
+            </p>
+            <p>
+              SegWit gyakorlatilag egy új gyors sáv létrehozása egy autópályán,
+              hogy alkalmazkodjon a megnövekedett forgalomhoz.
+            </p>
+            <p>
+              SegWit Soft leágazásnak minősül, ami azt jelenti, hogy
+              kompatibilis a régi kóddal, tehát visszafelé is kompatibilis az
+              egész Bitcoin blokklánccal. Ez különbözik a Hard leágazástól ahol
+              a szoftver nem kompatibilis a létező blokklánccal, ami így új
+              kriptovalutát hozna létre.
+            </p>
+            <p>
+              A protokoll megnöveli kapacitását és megőrzi kompatibilitását az
+              eredeti blokklánccal. 2017 Júliusában a világ legnagyobb bányászai
+              beleegyeztek, hogy bevezetik a SegWit-et és ez Augusztusban meg is
+              történt.
+            </p>
+
+            <h2>SegWit előnyei:</h2>
+            <ul>
+              <li>Egy blokk több tranzakciót képes tárolni.</li>
+              <li>Csökkenő tranzakciós díjak.</li>
+              <li>Csökken az egyéni tranzakciók mérete.</li>
+              <li>Gyorsabb tranzakció megerősítések.</li>
+              <li>Segít Bitcoin bővíthetőségén.</li>
+              <li>Segít Lightning Network aktiválásában.</li>
+            </ul>
+
+            <h2>SegWit hátrányai:</h2>
+            <ul>
+              <li>Bányászok kevesebb tranzakciós díjat kapnak.</li>
+              <li>
+                A bevezetési folyamat komplikált és minden tárcának be kell
+                vezetnie a SegWit támogatást.
+              </li>
+              <li>
+                Növelni fogja az erőforrások használatát mivel a kapacitás,
+                tranzakciók sávszélesség minden meg fog nőni.
+              </li>
+              <li>
+                Mint a Bitcoin Cash megalakulása mutatja kettéosztotta a
+                közösséget.
+              </li>
+              <li>
+                Másik probléma a SegWit fenntartása. A mellék lánc amely a
+                tranzakció aláírásokat tartalmazza ugyancsak bányászok kellenek
+                a fenntartásához. Azonban a fő blokklánccal ellentétben itt
+                nincs blokk jutalom.
+              </li>
+            </ul>
+            <div class="post-footer">
+              <p id="author">Szerző: kriptosuli.eu</p>
+
+              <div class="share">
+                <a
+                  id="fbshare"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://kriptosuli.eu/segwit.html"
+                  target="_blank"
+                  ><img
+                    src="images/fb-share.png"
+                    alt="Facebook"
+                    title="Facebook"
+                /></a>
+
+                <a
+                  id="tweet"
+                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fkriptosuli.eu%2Fsegwit.html&via=kriptosuli&text=Megoldas%20Bitcoin%20bovithetosegi%20problemaira%20I.%20resz%3A%20SegWit"
+                  target="_blank"
+                  ><img src="images/tweet.png" alt="Tweet" title="Twitter"
+                /></a>
+
+                <a
+                  id="google"
+                  href="https://plus.google.com/share?url=https://kriptosuli.eu/segwit.html"
+                  target="_blank"
+                  ><img src="images/google.png" alt="Google+" title="Google+"
+                /></a>
+
+                <a
+                  id="email"
+                  href="mailto:name1@mail.com,name2@mail.com?subject=Megold%C3%A1s%20Bitcoin%20b%C5%91v%C3%ADthet%C5%91s%C3%A9gi%20probl%C3%A9m%C3%A1ira%20I.%20r%C3%A9sz%3A%20SegWit"
+                  ><img src="images/email-icon.png" alt="Email" title="E-mail"
+                /></a>
+              </div>
+
+              <p id="date">2018. Január 26.</p>
+            </div>
+
+            <!--************* NEXT ARTICLES SECTION *************-->
+
+            <section class="next-section">
+              <h3>Merre tovább...</h3>
+              <div class="next-post-wrapper">
+                <div class="under-post">
+                  <a href="wallet.html"
+                    ><img
+                      src="images/wallet-small.jpg"
+                      alt="Kripopénzek tárolása"
+                    />
+                    <h4>Kripopénzek tárolása</h4></a
+                  >
+                </div>
+
+                <div class="under-post">
+                  <a href="ico.html"
+                    ><img src="images/ico-small.jpg" alt="Mi az az ICO?" />
+                    <h4>Mi az az ICO?</h4></a
+                  >
+                </div>
+
+                <div class="under-post">
+                  <a href="pow-pos.html"
+                    ><img
+                      src="images/pow-pos-small.jpg"
+                      alt="PoW és PoS mechanizmus"
+                    />
+                    <h4>PoW és PoS mechanizmus</h4></a
+                  >
+                </div>
+
+                <div class="under-post">
+                  <a href="litecoin.html"
+                    ><img
+                      src="images/litecoin-small.jpg"
+                      alt="Litecoin útmutató kezdőknek"
+                    />
+                    <h4>Litecoin útmutató kezdőknek</h4></a
+                  >
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+
+      <!--************* FOOTER *************-->
+
+      <footer>
+        <ul>
+          <li><a href="contact.html">Kapcsolat</a></li>
+          <li><a href="dictionary.html">Szótár</a></li>
+          <li><a href="tandc.html">Jogi nyilatkozat</a></li>
+          <li><a href="about.html">Rólunk</a></li>
+        </ul>
+        <p>
+          Kriptosuli.eu különböző marketing partnerprogramokban vesz részt,
+          amely azt jelenti, hogy Kriptosuli.eu jutalékot kaphat az oldalon
+          található egyes linkek használatáért.
+        </p>
+        <p>
+          Az oldalon megjelentetett információk kizárólag tájékoztató jellegűek,
+          nem minősülnek befektetési tanácsoknak. <br />Kriptopénzekbe való
+          befektetés, kereskedés jelentős kockázattal jár és veszteséggel is
+          zárulhat.<br />Csak és kizárólag saját felelősségedre vásárolj
+          kriptopénzeket. <br />Kriptosuli.eu ezért semmilyen felelőssséget nem
+          vállal.
+        </p>
+
+        &copy; 2018 Kriptosuli.eu Minden jog fenntartva.
+      </footer>
+    </div>
+  </body>
+</html>

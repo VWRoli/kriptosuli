@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-111610940-2"
+    ></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kriptopénz útmutatók és tájékoztatók kezdőknek magyar nyelven. Blokklánc technológia alapjai. Kriptopénz váltó és kriptopénz tárca ismertetők."
+    />
+    <meta
+      name="keywords"
+      content="Bitcoin, kripto valuta, Ethereum, blokklánc, litecoin, ripple, bitcoin cash, dash, kriptopénz, iota, cardano, stellar, bitcoin tárca, bitcoin tárolása"
+    />
+    <title>Kriptopénzek tárolása - Kriptosuli.eu</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link id="theme-style" rel="stylesheet" href="" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!--************* HEADER *************-->
+    <header>
+      <div class="container">
+        <a href="index.html"
+          ><img src="images/kriptosuli_logo_small.png" alt="Kriptosuli Logo"
+        /></a>
+      </div>
+    </header>
+
+    <!--************* NAV *************-->
+    <nav>
+      <div class="container">
+        <div class="nav-cont">
+          <div class="nav-burger">
+            <i class="fas fa-bars" id="burger-icon"></i>
+          </div>
+          <ul class="navbar">
+            <li class="menu-item "><a href="index.html">Főoldal</a></li>
+            <li class="menu-item"><a href="bitcoin.html">Bitcoin</a></li>
+            <li class="menu-item"><a href="ethereum.html">Ethereum</a></li>
+            <li class="menu-item"><a href="altcoins.html">Altcoinok</a></li>
+            <li class="menu-item dropdown selected">
+              <a href="#">Tárcák</a>
+              <ul class="sub-menu">
+                <li><a href="wallet.html">Ismertető</a></li>
+                <li><a href="ledger-nano.html">Ledger</a></li>
+                <li><a href="trezor.html">TREZOR</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="guides.html">Ismertetők</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--************* SLOGAN *************-->
+    <section id="slogan-cont">
+      <div class="container">
+        <div id="slogan">
+          <p class="slogan-text">
+            Szeretnéd megtudni, hogy mi az a Bitcoin, Ethereum, blokklánc
+            technológia? Itt minden kérdésedre választ kapsz a kriptopénz
+            világával kapcsolatban. Legyen szó a vásárlásról, tárolásról, vagy a
+            kriptovaluták technológiai hátteréről.
+          </p>
+
+          <div class="social">
+            <a href="https://www.facebook.com/kriptosuli.eu/" target="_blank"
+              ><img src="images/facebook.png" alt="Facebook link"
+            /></a>
+            <a href="https://twitter.com/kriptosuli" target="_blank"
+              ><img src="images/twitter.png" alt="Twitter link"
+            /></a>
+          </div>
+          <div class="theme-btns">
+            <input type="checkbox" name="theme-style" class="theme-btn" />
+            <i class="fas fa-moon"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--************* MAIN *************-->
+    <div class="flex-wrapper">
+      <div class="main">
+        <div class="container">
+          <!--************* MAIN ARTICLE SECTION *************-->
+          <section class="post-wrapper">
+            <h1>Kriptopénzek tárolása</h1>
+            <img src="images/wallet-big.jpg" alt="Kripopénzek tárolása">
+            <p>A hatalmas áringadozások közepette előfordul, hogy egy hacktől hangos a közösség ahol feltörtek egy kriptopénz váltót, és leléptek a felhasználók pénzével. A kriptopénz tulajok legnagyobb rémálma, hogy hacker támadás áldozata lesz.</p>
+            <p>Ezért SOHA NE tároljuk kriptopénzünket online váltók weboldalain! Bármennyire is kényelmesnek tűnik.</p>
+            <p>Olyan is előfordul, ahol az emberek elvesztik saját kriptopénzüket. Egy-egy összetört, elveszett merevlemez formájában. Szóval nem csak hackerektől, de sokszor saját magunktól is meg kell védeni kriptopénzünket.</p>
+            <p>De előbb néhány szó a privát és nyilvános kulcsokról.</p>
+                            
+            <h2>Privát és nyilvános kulcsok:</h2>
+            <p>Minden tárcának két kulcsa van. Egy nyilvános és egy privát, és emellett minden tárcának van egy címe is. Ez a cím azonban nem egyenlő a nyilvános kulccsal.</p>
+            
+            <span>1) A tárca címe szükséges, hogy tranzakciókat fogadj.</span><br>
+            <span>2) A nyilvános kulcs szükséges, hogy a felek ellenőrizzék a kimenő tranzakciókat.</span><br>
+            <span>3) A privát kulcsra (amit SOHA nem szabad kiadnod) pedig szükséged van kimenő tranzakciók indításához.</span>
+            <p>Ezek a szám- és betűsorozatok matematikailag mind kapcsolatban vannak egymással.</p>
+            <img src="images/wallet.jpg" alt="Kirpto tárca privát kulcs illusztráció">
+            
+            <h2>Kripto tárcák:</h2> 
+            
+            <p>A kripto tárcák gyakorlatilag egy program ami tárolja a privát és nyilvános kulcsodat, amikkel küldhetsz és fogadhatsz digitális pénzt a blokkláncon keresztül, és persze nyomon követheted az egyenlegedet. Ha szeretnél Bitcoin-t vagy egyéb altcoin-okat használni szükséged lesz egy ilyen tárcára.</p>
+            
+            <h2>Milyen változatok léteznek?</h2>
+            <p>Asztali gép: A tárca, letölthető és telepíthető a számítógépre, vagy laptopra. Ez csak azon az eszközön elérhető amelyre telepítve van. Viszonylag biztonságosnak számítanak, viszont ki van téve a vírus és feltörés veszélyének.</p>
+
+            <p>Online: Online tárcák egy „cloud”-on tárolják kriptovalutát. Ezek meglehetősen kényelmesek, mert bárhonnan hozzá lehet jutni a rajta lévő egyenleghez, azonban egy harmadik fél tárolja a privát kulcsot ami így sokkal sebezhetőbb egy hacker támadás ellen.</p>
+            <p>Mobil: Applikációként kell letölteni őket, mindennapi használatra ezek a legmegfelelőbb tárcák.</p>
+
+            <p>Hardver: Hardver tárcák kis USB eszközök. Annak ellenére, hogy a tranzakciókat online intézik, a privát kulcsot offline tárolják tehát ha a számítógépen vannak is rosszindulatú szoftverek, a privát kulcshoz akkor sem férnek hozzá. Ezáltal az egyik legbiztonságosabb tárcának számítanak. Ezek a tárcák általában többféle kriptovalutát is képesek tárolni. Azonban, míg a szoftveres tárcák ingyenesek, ezeknek az árai 60€-120€ között mozog.</p>
+            
+            <p>Papír: Gyakorlatilag egy kinyomtatott privát kulcs. Legtöbbször ajándékozásra használják. Kellő elővigyázatossággal biztonságos lehet.</p>
+            
+            <p><b>Néhány szempont amit vegyél figyelembe a döntés előtt:</b></p>
+            
+            <span>Szükséged van-e a tárcára mindennapi használathoz, vagy csak hosszú távú befektetési célra van?</span><br>
+                    
+            <span>Egy vagy több valutát szeretnél használni?</span><br>
+            
+            <span>Szükséged van-e hozzáférésre bárhonnan, vagy csak otthonról?</span>
+            
+            <h2>Copay</h2>
+            <p>Bitpay által készített, <a href="https://copay.io/" target="blank">Copay</a> az egyik legjobb a piacon. Kényelmes és kezdőbarát tárca. Könnyű felhasználó felülete van, asztali gépen, mobilon és online is használható. Nagyon jó biztonsággal rendelkezik. Ingyenesen használható. <a href="https://kriptosuli.eu/bitcoin.html">Bitcoin</a> és <a href="https://kriptosuli.eu/bch.html">Bitcoin Cash</a> tárolására az egyik legalkalmasabb.</p>
+            <img src="images/copay.jpg" alt="Copay tárca">
+            
+            <h2>Jaxx</h2>
+            <p><a href="https://jaxx.io/" target="blank">Jaxx</a> több kriptovalutát is képes tárolni mint például az <a href="https://kriptosuli.eu/ethereum.html">Ethereum</a>, Ether Classic, Dash, <a href="https://kriptosuli.eu/litecoin.html">Litecoin</a>, Zcash, <a href=”https://kriptosuli.eu/bitcoin.html”>Bitcoin</a>. Rengeteg eszközön elérhető (Windws, linux, Android, IOS). Összességében Jaxx egy kiváló választás azoknak akik egy több kriptovalutát tárolni képes tárcát keresnek. Biztonságos, ingyenes és felhasználó barát.</p>
+            <img src="images/jaxx.jpg" alt="Jaxx tárca">
+            
+            <h2>Trezor</h2>
+            <p><a href="https://shop.trezor.io?a=UzsJgRzV9i9a" target="blank">Trezor</a> egy hardver tárca. Nem kaphat vírust, és senki nem férhet hozzá a privát kulcsodhoz,  ezért az egyik legjobb biztonsággal rendelkezik. Könnyű használni, Windows, OS X és Linux barát. A Trezor tárcát mindig nálad kell legyen, ha Bitcoin-t szeretnél küldeni, ezért azoknak ajánlott akik nem használják sokat, és inkább befektetési céllal vettek Kriptopénzt. Többek között támogatja <a href=”https://kriptosuli.eu/bitcoin.html”>Bitcoin</a>, <a href="https://kriptosuli.eu/litecoin.html">Litecoin</a>, Dash és Zcash-t.</p>
+            <p>89€ + 17€ posta költség</p>
+            <img src="images/trezor_display_transaction.jpg" alt="Trezor hardver tárca">
+            
+            <h2>Ledger Nano S</h2>
+            <p>A <a href="https://www.ledgerwallet.com/r/f477" target="blank">Ledger Nano S</a> az egyik legbiztonságosabb  és legnépszerűbb hardver tárca a piacon. Jelenleg 23 különböző kriptovalutát képes tárolni. Használatához csak egy Chrome böngészőre van szükséged. Saját PIN kóddal rendelkezik amit te állíthatsz be az első bekapcsoláskor. Részletesebb beszámolót a <a href="https://kriptosuli.eu/ledger-nano.html">Ledger Nano S</a> menüpont találsz.</p>
+            <p>Ára 79.00 € postaköltséggel együtt</p>
+            <img src="images/ledger-nano-s-large.jpg" alt="Ledger Nano S hardver tárca">
+            
+            <h2>Exodus</h2>
+            <p><p>Az <a href="https://www.exodus.io/" target="blank">Exodus</a> egy viszonylag új és ismeretlen digitális pénztárca. Jelenleg csak számítógépen elérhető. Nem csak tárolni de kereskedni is lehet ezen a nagyon felhasználóbarát felületen. Kereskedhetünk <a href="https://kriptosuli.eu/bitcoin.html">Bitcoin</a>, <a href="https://kriptosuli.eu/ethereum.html">Ethereum</a>, <a href="https://kriptosuli.eu/litecoin.html">Litecoin</a> és Dash-el. A tárca ingyenesen használható.</p>
+            <img src="images/exodus-wallet.jpg" alt="Exodus tárca">
+            
+            <h2>További biztonsági intézkedések:</h2>
+            
+            <p>Mindig készíts biztonsági mentést a tárcádról. Csak kisebb összegeket tarts online mindennapi használatra. A többit pedig hardver tárcán.</p>
+            <p>Hosszú és bonyolult jelszavak segítenek, és állítsd be, hogy a kiutalás csak jelszóval legyen lehetséges.</p>
+            
+            <p>Telepítsd a legfrissebb szoftver frissítéseket, hogy elérhetőek legyenek a legutóbbi biztonsági fejlesztések.</p>
+            <h2>Záró gondolatok</h2>
+            <p>Semmi sem 100%-ig biztonságos. Vannak bizonyos tárcák amik nagyon közel vannak, de egyik sem tökéletes. A tárca választást nem szabad elkapkodni. Válassz olyat, amellyel nyugodtan fogsz tudni aludni éjszaka.</p>
+            <div class="post-footer">
+              <p id="author">Szerző: kriptosuli.eu</p>
+
+              <div class="share">
+                <a id="fbshare" href="https://www.facebook.com/sharer/sharer.php?u=https://kriptosuli.eu/wallet.html" target="_blank"><img src="images/fb-share.png" alt="Facebook" title="Facebook"></a>    
+                    
+                <a id="tweet" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fkriptosuli.eu%2Fwallet.html&via=kriptosuli&text=Kriptopenzek%20tarolasa" target="_blank"><img src="images/tweet.png" alt="Tweet" title="Twitter"></a>
+                    
+                <a id="google" href="https://plus.google.com/share?url=https://kriptosuli.eu/wallet.html" target="_blank"><img src="images/google.png" alt="Google+" title="Google+"/></a>
+                
+                <a id="email" href="mailto:name1@mail.com,name2@mail.com?subject=Kriptop%C3%A9nzek%20t%C3%A1rol%C3%A1sa"><img src="images/email-icon.png" alt="Email" title="E-mail"/></a>
+              </div>
+
+              <p id="date">2018. Január 05.</p>
+            </div>
+
+            <!--************* NEXT ARTICLES SECTION *************-->
+
+            <section class="next-section">
+              <h3>Merre tovább...</h3>
+              <div class="next-post-wrapper">
+                <div class="under-post">
+                    <a href="ledger-nano.html"><img src="images/ledger-nano-s-small.jpg" alt="Ledger Nano S bemutató">
+                        <h4>Ledger Nano S bemutató</h4></a>
+                </div>
+
+                <div class="under-post">
+                    <a href="trezor.html"><img src="images/trezor-small.jpg" alt="TREZOR hardver tárca bemutató">
+                        <h4>TREZOR hardver tárca bemutató</h4></a>
+                </div>
+
+                <div class="under-post">
+                  <a href="cryptocurrency.html"
+                    ><img
+                      src="images/cryptos-small.jpg"
+                      alt="Bevezetés a Kriptopénzekbe"
+                    />
+                    <h4>Bevezetés a Kriptopénzekbe</h4></a
+                  >
+                </div>
+
+                <div class="under-post">
+                    <a href="ripple.html"><img src="images/ripple-small.jpg" alt="Mi az a Ripple? Útmutató kezdőknek">
+                        <h4>Mi az a Ripple? Útmutató kezdőknek</h4></a>
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+
+      <!--************* FOOTER *************-->
+
+      <footer>
+        <ul>
+          <li><a href="contact.html">Kapcsolat</a></li>
+          <li><a href="dictionary.html">Szótár</a></li>
+          <li><a href="tandc.html">Jogi nyilatkozat</a></li>
+          <li><a href="about.html">Rólunk</a></li>
+        </ul>
+        <p>
+          Kriptosuli.eu különböző marketing partnerprogramokban vesz részt,
+          amely azt jelenti, hogy Kriptosuli.eu jutalékot kaphat az oldalon
+          található egyes linkek használatáért.
+        </p>
+        <p>
+          Az oldalon megjelentetett információk kizárólag tájékoztató jellegűek,
+          nem minősülnek befektetési tanácsoknak. <br />Kriptopénzekbe való
+          befektetés, kereskedés jelentős kockázattal jár és veszteséggel is
+          zárulhat.<br />Csak és kizárólag saját felelősségedre vásárolj
+          kriptopénzeket. <br />Kriptosuli.eu ezért semmilyen felelőssséget nem
+          vállal.
+        </p>
+
+        &copy; 2018 Kriptosuli.eu Minden jog fenntartva.
+      </footer>
+    </div>
+  </body>
+</html>

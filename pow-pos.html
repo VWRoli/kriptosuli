@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-111610940-2"
+    ></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kriptopénz útmutatók és tájékoztatók kezdőknek magyar nyelven. Blokklánc technológia alapjai. Kriptopénz váltó és kriptopénz tárca ismertetők."
+    />
+    <meta
+      name="keywords"
+      content="Bitcoin, kripto valuta, Ethereum, blokklánc, litecoin, ripple, bitcoin cash, dash, kriptopénz, iota, cardano, stellar, bitcoin tárca, bitcoin tárolása"
+    />
+    <title>Proof of Work (PoW) és Proof os Stake (PoS) - Kriptosuli.eu</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link id="theme-style" rel="stylesheet" href="" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!--************* HEADER *************-->
+    <header>
+      <div class="container">
+        <a href="index.html"
+          ><img src="images/kriptosuli_logo_small.png" alt="Kriptosuli Logo"
+        /></a>
+      </div>
+    </header>
+
+    <!--************* NAV *************-->
+    <nav>
+      <div class="container">
+        <div class="nav-cont">
+          <div class="nav-burger">
+            <i class="fas fa-bars" id="burger-icon"></i>
+          </div>
+          <ul class="navbar">
+            <li class="menu-item"><a href="index.html">Főoldal</a></li>
+            <li class="menu-item"><a href="bitcoin.html">Bitcoin</a></li>
+            <li class="menu-item"><a href="ethereum.html">Ethereum</a></li>
+            <li class="menu-item"><a href="altcoins.html">Altcoinok</a></li>
+            <li class="menu-item dropdown">
+              <a href="#">Tárcák</a>
+              <ul class="sub-menu">
+                <li><a href="wallet.html">Ismertető</a></li>
+                <li><a href="ledger-nano.html">Ledger</a></li>
+                <li><a href="trezor.html">TREZOR</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="guides.html">Ismertetők</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--************* SLOGAN *************-->
+    <section id="slogan-cont">
+      <div class="container">
+        <div id="slogan">
+          <p class="slogan-text">
+            Szeretnéd megtudni, hogy mi az a Bitcoin, Ethereum, blokklánc
+            technológia? Itt minden kérdésedre választ kapsz a kriptopénz
+            világával kapcsolatban. Legyen szó a vásárlásról, tárolásról, vagy a
+            kriptovaluták technológiai hátteréről.
+          </p>
+
+          <div class="social">
+            <a href="https://www.facebook.com/kriptosuli.eu/" target="_blank"
+              ><img src="images/facebook.png" alt="Facebook link"
+            /></a>
+            <a href="https://twitter.com/kriptosuli" target="_blank"
+              ><img src="images/twitter.png" alt="Twitter link"
+            /></a>
+          </div>
+          <div class="theme-btns">
+            <input type="checkbox" name="theme-style" class="theme-btn" />
+            <i class="fas fa-moon"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--************* MAIN *************-->
+    <div class="flex-wrapper">
+      <div class="main">
+        <div class="container">
+          <!--************* MAIN ARTICLE SECTION *************-->
+          <section class="post-wrapper">
+            <h1>
+              Mi a különbség Proof of Work (PoW) és Proof os Stake (PoS) között?
+            </h1>
+            <img
+              src="images/pow-pos.jpg"
+              alt="Mi a különbség Proof of Work (PoW) és Proof os Stake (PoS) között?"
+            />
+
+            <p>
+              Ehhez a cikkhez szükséged lesz némi alapvető tudásra a
+              <a href="https://kriptosuli.eu/bitcoin.html">Bitcoin</a>-ról,
+              <a href="https://kriptosuli.eu/ethereum.html">Ethereum</a>-ról,
+              <a href="https://kriptosuli.eu/blockchain.html">blokkláncról</a>
+              és
+              <a href="https://kriptosuli.eu/cryptocurrency.html"
+                >kriptopénzekről</a
+              >.
+            </p>
+
+            <h2>Miért van szükség a megegyezési protokollokra?</h2>
+
+            <p>
+              Proof of Work (PoW) és Proof os Stake (PoS) megegyezési
+              mechanizmus is ugyanazt a célt szolgálja mégpedig, hogy
+              megegyezzenek a blokklánc állapotáról. Minden csomópont (node)
+              egyet kell, hogy értsen a blokklánc állapotáról.
+            </p>
+            <p>
+              Minden blokkláncnak kell egy megegyezési mechanizmust választani
+              amely kezeli a megegyezést a résztvevők között. Biztosítja, hogy a
+              következő blokkja a blokkláncnak az egyetlen változata az
+              igazságnak és megvédje a blokkláncot a támadásoktól. Ilyen támadás
+              például egy DDoS támadások amelynek célja, hogy több hamis kérelem
+              küldésével kimerítse a számítógépes erőforrásokat.
+            </p>
+
+            <h2>Proof of Work (PoW)</h2>
+            <img src="images/pow.jpg" alt="Proof of work illusztráció" />
+
+            <p>
+              Eredetileg Proof of Work (PoW) koncepciójával Markus Jakobsson és
+              Ari Juels állt elő egy 1999-ben közzétett dokumentumban.
+            </p>
+            <p>
+              Könnyebb érthetőség kedvéért Bitcoin-t használjuk példának. De az
+              összes kriptopénz amit bányászattal állítanak elő hasonló elven
+              működik.
+            </p>
+            <p>
+              Amikor egy új blokkot előállítanak, ezt hozzá kell fűzniük a
+              blokklánchoz. Proof of Work esetében a bányászok bányásszák ezeket
+              a blokkokat. Ez azt jelenti, hogy a bányászok összeállítják a
+              tranzakciókat egy blokkba, ezután egy számot raknak a blokkhoz
+              amelyet „nonce”-nak neveznek. Ezt a blokkot a „nonce” számmal
+              együtt ezután egy SHA-256 hash algoritmussal kódolják.
+            </p>
+
+            <p>
+              Bitcoin-nál ezeknek a blokkoknak egy bizonyos számú nullával kell
+              kezdődnie. Jelenlegi nehézségi szinten ez 17 darab nulla. Idővel
+              ez a szám nőni fog mert a Bitcoin bányászat nehézségi szintje
+              folyamatosan emelkedik. Miután a bányász lekódolta a hash
+              algoritmussal a blokkot, megnézi, hogy 17 nullával kezdődik-e. Ha
+              nem lecseréli a „nonce” számot és megismétli a hash kódolási
+              folyamatot egészen addig amíg a hash szám 17 nullával kezdődik.
+            </p>
+
+            <p>
+              Ez a folyamatot több milliószor el kell végezni mire sikeresen
+              megtalálja a korrekt „nonce” számot ami kiadja a megfelelő hash
+              számot. Az első bányász aki sikeresen elvégzi ezt a folyamatot
+              Bitcoin-al lesz jutalmazva. Jelenlegi blokk jutalom 12,5 BTC. Majd
+              a blokkot hozzáadja a blokklánchoz és értesíti a többi bányászt,
+              hogy ez a blokk kész.
+            </p>
+
+            <p>
+              Mivel a bányásznak ilyen sokszor meg kell ismételni a folyamatot
+              mire sikeresen kibányászhatja a blokkot, ez rengeteg hardver
+              kapacitásba és elektromos áramba kerül. Jelenleg Bitcoin bányászok
+              elektromos áram használata teljes Dániáéval vetekszik.
+            </p>
+
+            <h2>Proof of Stake (PoS)</h2>
+            <img src="images/pos.jpg" alt="Proof of stake illusztráció" />
+            <p>
+              Proof of Stake (PoS) egy alternatív módja a blokk ellenőrzésének
+              és érvényesítésének. Nem úgy mint a Proof of Work rendszerben ahol
+              az algoritmus megjutalmazza a bányászokat akik megoldják a
+              matematikai problémát., a Proof of Stake rendszerben az új blokk
+              létrehozója egy véletlenszerű módon van kiválasztva a vagyonától
+              függően, amelyet „stake”-nek hívnak. Ezt úgy lehet legkönnyebben
+              elképzelni mint a részvényeket egy vállalatban.
+            </p>
+            <p>
+              Tehát ha valaki a teljes Ethereum készlet 1%-át tartja akkor 1%
+              eséllyel hozhat létre új blokkot. A PoS rendszerben nincs blokk
+              jutalom tehát a bányászok (akiket itt már „forgers”-nek azaz
+              kovácsnak hívnak) tranzakciós díjakat zsebelik be.
+            </p>
+
+            <p>
+              Amiért szükség van nagy mennyiségű kriptopénz tárolására (Ethereum
+              esetében 1250 ETH lesz), hogy érdekelt fél legyen valaki akárcsak
+              egy vállalat részesedésével. Így mivel jelentős részesedése van
+              ezeknek a részvényeseknek, kevésbé valószínű, hogy ártanának a
+              hálózatnak, mert saját magukat károsítanák ha a hálózat
+              megbízhatatlan lenne. Ezáltal a 51%-os támadás problémája is
+              kiküszöbölésre kerül, mivel ha valaki megszerzi az ETH készlet
+              51%-át és ártani akarna a rendszernek akkor az gyakorlatilag csak
+              saját magának ártana. És elképesztően drága lenne megszerezni az
+              ETH készlet 51%-át.
+            </p>
+
+            <p>
+              Amíg PoW rendszerben a legnagyobb számítógépes teljesítménnyel
+              rendelkező bányásznak fog legtöbbször sikerülni a blokk
+              hozzáadása, addig PoS rendszerben a legnagyobb részvényesnek lesz
+              a legnagyobb esélye új blokk generálásához.
+            </p>
+
+            <h2>Miért vált Ethereum PoS-re?</h2>
+            <p>
+              PoS rendszerben nem kell nagy számítógépes teljesítmény tehát az
+              új blokk generálásának ára jelentősen csökken, amely sokkal
+              hatékonyabbá teszi a rendszert. Valamint segít decentralizáltabbá
+              tenni a hálózatot.
+            </p>
+
+            <p>
+              Az Ethereum közösség szerint a PoS mechanizmus rendszer segíteni
+              fog a jelenlegi bővíthetőségi problémák megoldásában.
+            </p>
+            <p>
+              Ethereum PoS rendszerében amely Casper néven ismert, azt a
+              személyt aki rossz tranzakciókat próbál érvényesíteni büntetés éri
+              a berakott tőkéjének egy részének elvesztésével.
+            </p>
+
+            <p>
+              Valamikor 2018-ban fog megtörténni a váltás, először vegyes
+              mechanizmussal, tehát csak minden 100. blokk lesz PoS.
+            </p>
+
+            <div class="post-footer">
+              <p id="author">Szerző: kriptosuli.eu</p>
+
+              <div class="share">
+                <a
+                  id="fbshare"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://kriptosuli.eu/pow-pos.html"
+                  target="_blank"
+                  ><img
+                    src="images/fb-share.png"
+                    alt="Facebook"
+                    title="Facebook"
+                /></a>
+
+                <a
+                  id="tweet"
+                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fkriptosuli.eu%2Fpow-pos.html&via=%40kriptosuli.eu&text=Proof%20of%20Work%20es%20Proof%20es%20Stake%20k%F6z%F6tti%20kulonbseg"
+                  target="_blank"
+                  ><img src="images/tweet.png" alt="Tweet" title="Twitter"
+                /></a>
+
+                <a
+                  id="google"
+                  href="https://plus.google.com/share?url=https://kriptosuli.eu/pow-pos.html"
+                  target="_blank"
+                  ><img src="images/google.png" alt="Google+" title="Google+"
+                /></a>
+
+                <a
+                  id="email"
+                  href="mailto:name1@mail.com,name2@mail.com?subject=Mi%20a%20k%C3%BCl%C3%B6nbs%C3%A9g%20Proof%20of%20Work%20(PoW)%20%C3%A9s%20Proof%20os%20Stake%20(PoS)%20k%C3%B6z%C3%B6tt%3F"
+                  ><img src="images/email-icon.png" alt="Email" title="E-mail"
+                /></a>
+              </div>
+
+              <p id="date">2018. Január 20.</p>
+            </div>
+
+            <!--************* NEXT ARTICLES SECTION *************-->
+
+            <section class="next-section">
+              <h3>Merre tovább...</h3>
+              <div class="next-post-wrapper">
+                <div class="under-post">
+                  <a href="bitcoin.html"
+                    ><img
+                      src="images/bitcoin-small.jpg"
+                      alt="Bitcoin útmutató kezdőknek"
+                    />
+                    <h4>Bitcoin útmutató kezdőknek</h4></a
+                  >
+                </div>
+
+                <div class="under-post">
+                  <a href="segwit.html"
+                    ><img src="images/segwit-small.jpg" alt="Mi az a SegWit?" />
+                    <h4>Mi az a SegWit?</h4></a
+                  >
+                </div>
+
+                <div class="under-post">
+                  <a href="cryptocurrency.html"
+                    ><img
+                      src="images/cryptos-small.jpg"
+                      alt="Bevezetés a Kriptopénzekbe"
+                    />
+                    <h4>Bevezetés a Kriptopénzekbe</h4></a
+                  >
+                </div>
+
+                <div class="under-post">
+                  <a href="ico.html"
+                    ><img src="images/ico-small.jpg" alt="Mi az az ICO?" />
+                    <h4>Mi az az ICO?</h4></a
+                  >
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+
+      <!--************* FOOTER *************-->
+
+      <footer>
+        <ul>
+          <li><a href="contact.html">Kapcsolat</a></li>
+          <li><a href="dictionary.html">Szótár</a></li>
+          <li><a href="tandc.html">Jogi nyilatkozat</a></li>
+          <li><a href="about.html">Rólunk</a></li>
+        </ul>
+        <p>
+          Kriptosuli.eu különböző marketing partnerprogramokban vesz részt,
+          amely azt jelenti, hogy Kriptosuli.eu jutalékot kaphat az oldalon
+          található egyes linkek használatáért.
+        </p>
+        <p>
+          Az oldalon megjelentetett információk kizárólag tájékoztató jellegűek,
+          nem minősülnek befektetési tanácsoknak. <br />Kriptopénzekbe való
+          befektetés, kereskedés jelentős kockázattal jár és veszteséggel is
+          zárulhat.<br />Csak és kizárólag saját felelősségedre vásárolj
+          kriptopénzeket. <br />Kriptosuli.eu ezért semmilyen felelőssséget nem
+          vállal.
+        </p>
+
+        &copy; 2018 Kriptosuli.eu Minden jog fenntartva.
+      </footer>
+    </div>
+  </body>
+</html>
